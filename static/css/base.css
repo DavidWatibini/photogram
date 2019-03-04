@@ -17,10 +17,14 @@ body{
 }
 .navbar-collapse{
   position: relative;
-  left: 60%;
+  left: 0%;
 }
 img{
   height: 350px;
   width: 447.7px;
   display: inline-block;
+}
+.navbar-left{
+  position: relative;
+  left: 45%;
 }
