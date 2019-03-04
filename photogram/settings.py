@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'gallery',
+    'gallery.apps.GalleryConfig',
     'bootstrap3'
 ]
 
@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'photogram.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'gallery',
+        'NAME': 'photogram',
         'USER': 'moringa',
     'PASSWORD':'1234',
     }
