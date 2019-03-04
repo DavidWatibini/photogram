@@ -4,14 +4,11 @@
 {% for image in all_images %}
 
 
-
-<img src="{{image.image_path.url}}" alt="massive image" />
-
-<h6 >{{image.image_name}}</h6>
-<h6>Location:{{image.image_location}}</h6>
-
-
-
+<div class="row">
+  <div class="col-md-4">
+    <img src="{{image.image_path.url}}" alt="massive image" />
+  </div>
+</div>
 
 {% endfor %}
 {%endblock%}

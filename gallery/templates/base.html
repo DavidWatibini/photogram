@@ -12,12 +12,13 @@
 
     {%block styles%}
       {%bootstrap_css%}
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {%endblock%}
   </head>
   <body>
 
     {%block content%}
-
+    {% include "navbar.html" %}
     {%endblock%}
 
     {% block scripts %}
