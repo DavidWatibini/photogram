@@ -28,3 +28,8 @@ class Image(models.Model):
 
     def __str__(self):
         return self.image_name
+
+    @classmethod
+    def search_by_title(cls,search_term):
+        search_result = cls.objects.filter(image_name__icontains=search_term)
+        return search_result
