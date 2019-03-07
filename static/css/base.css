@@ -21,7 +21,7 @@ body{
 }
 img{
   height: 350px;
-  width: 428.9px;
+  width: 350px;
   display: inline-block;
 }
 .navbar-left{
@@ -33,4 +33,7 @@ img{
 }
 #hide2{
   display: none;
+}
+.home{
+  margin-left: 140px;
 }

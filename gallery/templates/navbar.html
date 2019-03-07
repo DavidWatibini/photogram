@@ -34,11 +34,25 @@
     </div>
     <!-- search form end -->
 
-    <div class="navbar-collapse collapse">
-      <ul class="nav navbar-nav navbar-left">
+    <div class="navbar-collapse collapse" style="color:white;">
+      <ul class="nav navbar-nav navbar-left" style="color:white;">
         <li><a style="color:black;" href="/">HOME</a></li>
         <li id="hide2"><a style="color:black;" href="/">CATEGORY</a></li>
-        <li id="show2"><a id="my-link" style="color:black;" href="#">LOCATION</a></li>
+        <li class="nav-item dropdown">
+        <a style="color:black;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Location
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Nairobi</a>
+          <br>
+          <a class="dropdown-item" href="#">London</a>
+          <br>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Mombasa</a>
+          <br>
+          <a class="dropdown-item" href="#">Dubai</a>
+        </div>
+      </li>
         <li><a style="color:black;" href="/admin">ADMIN</a></li>
 
     </div>
