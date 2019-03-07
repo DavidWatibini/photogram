@@ -56,18 +56,18 @@ or just use this
 
 | Behavior        | Result |
 | ------------- |:----:|
-|  |  |
-|  | |
-| | |
-|  | |
-|  | |
-|  | |
+| user loads the page | all favorite images are displayed |
+| user clicks on an image that interests him/her | the image is enlarged in a modal and its Description and a button for copping image is shown |
+| user clicks on the copy link button | the image url is copied and an alert is displayed |
+| user searches for an image category  | user is re-directed to the searched term with relevant images displayed |
+| user clicks on location | a dropdown menu is displayed |
+| usser clicks on one of the dropdown menu | user is re-directed to  the relevant images |
 
 ## TDD
 
 -To test the app, run this commands in the terminal;
 
-`$ python3.6 manage.py test.py`
+`$ python3.6 manage.py test.py photogram`
 
 
 ## Live link
