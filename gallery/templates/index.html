@@ -1,51 +1,31 @@
 {%extends 'base.html'%}
 {% block content %}
 {{ block.super}}
+<script>
+  function CopyFun(link) {
+  var copyText = document.getElementById(link);
+  copyText.select();
+  document.execCommand("copy");
+  alert("Text has been coppied: " + copyText.value);
+}
+</script>
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md=12">
-      {% for image in index_images %}
-      <button type="button" data-toggle="modal" data-target="#exampleModalCenter""><img src="{{image.image_path.url}}" alt="massive image" /></button>
-      {% endfor %}
+    <div class="home">
+      <div class="col-md=12">
+        {% for image in index_images %}
+        <a data-fancybox href="{{image.image_path.url}}" data-caption="<p>{{image.image_description}}</p> <button type='button' class='btn btn-primary' onclick=CopyFun('{{image.id}}') name='button' >Copy Link</button>">
+          <img src=" {{image.image_path.url}}" alt=" massive image" />
+        </a>
+        <input type="text" class="hidden" value="https://watigram.herokuapp.com{{image.image_path.url}}" id="{{image.id}}">
+
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>
 
-{% for image in index_images %}
 
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 
-    <div class="modal-dialog modal-notify modal-info" role="document">
-      <!--Content-->
-      <div class="modal-content">
-        <!--Header-->
-        <div class="modal-header">
-          <p class="heading lead">{{image.image_name}}</p>
-
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true" class="white-text">&times;</span>
-          </button>
-        </div>
-
-        <!--Body-->
-        <div class="modal-body">
-          <div class="text-center">
-            <i class="fas fa-check fa-4x mb-3 animated rotateIn"></i>
-            <img src="{{ image.image_path.url }}" data-target="#{{image.image_path.id}}" width="80%" height="70&">
-            <h6>{{image.image_description}}</h6>
-          </div>
-        </div>
-
-        <!--Footer-->
-        <div class="modal-footer justify-content-center">
-          <a type="button" class="btn btn-primary">Copy link <i class="far fa-gem ml-1 text-white"></i></a>
-          <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Back to Gallery</a>
-        </div>
-      </div>
-      <!--/.Content-->
-    </div>
-  </div>
-  <!-- Central Modal Medium Info-->
-  {% endfor %}
 {%endblock%}
