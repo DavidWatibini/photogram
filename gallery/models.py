@@ -11,6 +11,9 @@ class Category(models.Model):
     def __str__(self):
         return self.category_det
 
+    def save_category(self):
+        self.save()
+
 #for location_det
 
 class Location(models.Model):
@@ -18,6 +21,9 @@ class Location(models.Model):
 
     def __str__(self):
         return self.location_det
+
+    def save_category(self):
+        self.save()
 
 class Image(models.Model):
     image_name = models.CharField(max_length =30,default='random')
@@ -28,6 +34,9 @@ class Image(models.Model):
 
     def __str__(self):
         return self.image_name
+
+    def save_image(self):
+        self.save()
 
     @classmethod
     def search_by_category(cls,search_term):
